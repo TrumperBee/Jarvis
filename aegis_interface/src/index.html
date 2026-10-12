@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AEGIS OS — Neural Command Nexus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;900&family=Rajdhani:wght@300;500;600;700&family=JetBrains+Mono:wght@300;400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ─── GATEWAY ─────────────────────────────────────────── -->
+  <div id="gateway" class="gateway">
+    <div class="gateway__bg"></div>
+    <div class="gateway__emblem">
+      <svg viewBox="0 0 200 200" class="gateway__hex">
+        <defs>
+          <linearGradient id="gwHexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00ffff" stop-opacity="0.9"/>
+            <stop offset="50%" stop-color="#10b981" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#a855f7" stop-opacity="0.2"/>
+          </linearGradient>
+          <filter id="gwHexGlow">
+            <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#00ffff" flood-opacity="0.7"/>
+          </filter>
+        </defs>
+        <polygon points="100,5 185,52.5 185,147.5 100,195 15,147.5 15,52.5"
+                 fill="none" stroke="url(#gwHexGrad)" stroke-width="2.5" filter="url(#gwHexGlow)"/>
+        <polygon points="100,22 170,62 170,138 100,178 30,138 30,62"
+                 fill="none" stroke="#00ffff" stroke-width="0.8" opacity="0.25"/>
+        <polygon points="100,39 155,71.5 155,128.5 100,161 45,128.5 45,71.5"
+                 fill="none" stroke="#a855f7" stroke-width="0.5" opacity="0.15"/>
+        <text x="100" y="128" text-anchor="middle" font-family="'Orbitron',sans-serif"
+              font-size="90" font-weight="900" fill="#00ffff" filter="url(#gwHexGlow)">A</text>
+      </svg>
+    </div>
+    <div class="gateway__brand">
+      <div class="gateway__title">AEGIS COMMAND NEXUS</div>
+      <div class="gateway__sub">MULTI-AGENT LAYER</div>
+    </div>
+    <button class="gateway__btn" id="gateway-btn"><span>[ INITIATE AEGIS PROTOCOL ]</span></button>
+    <div class="gateway__scan"></div>
+  </div>
+
+  <!-- ─── NEURAL SYNC ──────────────────────────────────────── -->
+  <div id="neural-sync" class="sync">
+    <div class="sync__bg"></div>
+    <div class="sync__emblem">
+      <svg viewBox="0 0 200 200" class="sync__hex">
+        <defs>
+          <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00ffff" stop-opacity="0.8"/>
+            <stop offset="50%" stop-color="#0088ff" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#00ffff" stop-opacity="0.1"/>
+          </linearGradient>
+          <filter id="hexGlow">
+            <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00ffff" flood-opacity="0.6"/>
+          </filter>
+        </defs>
+        <polygon points="100,5 185,52.5 185,147.5 100,195 15,147.5 15,52.5"
+                 fill="none" stroke="url(#hexGrad)" stroke-width="2" filter="url(#hexGlow)"/>
+        <polygon points="100,22 170,62 170,138 100,178 30,138 30,62"
+                 fill="none" stroke="#00ffff" stroke-width="0.8" opacity="0.3"/>
+        <polygon points="100,39 155,71.5 155,128.5 100,161 45,128.5 45,71.5"
+                 fill="none" stroke="#00ffff" stroke-width="0.5" opacity="0.15"/>
+        <text x="100" y="128" text-anchor="middle" font-family="'Orbitron',sans-serif"
+              font-size="90" font-weight="900" fill="#00ffff" filter="url(#hexGlow)">A</text>
+        <circle cx="100" cy="5" r="2.5" fill="#00ffff"/>
+        <circle cx="185" cy="52.5" r="2.5" fill="#00ffff"/>
+        <circle cx="185" cy="147.5" r="2.5" fill="#00ffff"/>
+        <circle cx="100" cy="195" r="2.5" fill="#00ffff"/>
+        <circle cx="15" cy="147.5" r="2.5" fill="#00ffff"/>
+        <circle cx="15" cy="52.5" r="2.5" fill="#00ffff"/>
+        <line x1="100" y1="5" x2="100" y2="22" stroke="#00ffff" stroke-width="0.5" opacity="0.4"/>
+        <line x1="170" y1="62" x2="185" y2="52.5" stroke="#00ffff" stroke-width="0.5" opacity="0.4"/>
+        <line x1="170" y1="138" x2="185" y2="147.5" stroke="#00ffff" stroke-width="0.5" opacity="0.4"/>
+        <line x1="100" y1="178" x2="100" y2="195" stroke="#00ffff" stroke-width="0.5" opacity="0.4"/>
+        <line x1="30" y1="138" x2="15" y2="147.5" stroke="#00ffff" stroke-width="0.5" opacity="0.4"/>
+        <line x1="30" y1="62" x2="15" y2="52.5" stroke="#00ffff" stroke-width="0.5" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="sync__brand">
+      <div class="sync__title">AEGIS</div>
+      <div class="sync__subtitle">Neural Command Nexus</div>
+    </div>
+    <div class="sync__core"></div>
+    <div class="sync__status">
+      <div class="sync__step" data-step="boot">BOOTING CORE...</div>
+      <div class="sync__step" data-step="link">ESTABLISHING NEURAL LINK...</div>
+      <div class="sync__step" data-step="sync">SYNCHRONIZING SENSORS...</div>
+      <div class="sync__step" data-step="ready">NEURAL SYNC COMPLETE</div>
+    </div>
+    <div class="sync__scan"></div>
+  </div>
+
+  <!-- ─── MAIN UI ──────────────────────────────────────────── -->
+  <div id="main-content" class="main-ui hidden">
+    <audio id="audio-input" autoplay></audio>
+
+    <!-- HEADER ROW -->
+    <header id="operational-header"></header>
+
+    <!-- LEFT PANEL: SYSTEM CORE -->
+    <aside id="left-panel">
+      <div class="panel" id="telemetry-system"></div>
+      <div class="panel" id="automation-logs"></div>
+      <div class="panel" id="tournament-center"></div>
+    </aside>
+
+    <!-- CENTER PANEL: NEURAL CORE + VIEWPORT -->
+    <section id="center-panel">
+      <div class="panel" id="core-container">
+        <div id="globe-container"></div>
+        <div id="cognitive-panel">
+          <div class="panel-header">COGNITIVE FIELD</div>
+          <canvas id="cognitive-wave"></canvas>
+          <div class="cognitive-status" id="cognitive-status">[AEGIS::STANDBY]</div>
+        </div>
+      </div>
+      <div class="panel" id="viewport-container">
+        <div id="viewport-stage"></div>
+      </div>
+    </section>
+
+    <!-- RIGHT PANEL: GLOBAL INTELLIGENCE -->
+    <aside id="right-panel">
+      <div class="panel" id="news-feed"></div>
+      <div class="panel" id="network-noc"></div>
+      <div class="panel" id="engineering-context"></div>
+    </aside>
+
+    <!-- TERMINAL -->
+    <footer id="terminal-system" class="panel"></footer>
+
+    <!-- STATUS STRIP -->
+    <div id="status-strip"></div>
+  </div>
+
+  <!-- ─── NOTIFICATION CONTAINER ────────────────────────────── -->
+  <div id="notification-container" aria-live="polite"></div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
