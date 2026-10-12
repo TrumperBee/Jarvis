@@ -179,4 +179,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Google OAuth secrets (client secret + user refresh token)
+credentials/
+*.token.json
+
 # End of https://www.toptal.com/developers/gitignore/api/python

@@ -17,5 +17,9 @@ class Config:
     OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
     SEARCH_API_KEY: str = os.getenv("SEARCH_API_KEY", "")
 
+    # Telegram mobile bridge (bot token from @BotFather, chat id from @userinfobot)
+    TELEGRAM_BOT_TOKEN: str = os.getenv("TELEGRAM_BOT_TOKEN", "")
+    TELEGRAM_CHAT_ID: str = os.getenv("TELEGRAM_CHAT_ID", "")
+
 
 config = Config()
